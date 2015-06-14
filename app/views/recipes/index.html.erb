@@ -1,0 +1,25 @@
+<h1>ALL The Recipes</h1>
+
+
+  
+<%= link_to "Add new recipe", "/recipes/new" %>
+
+<div class= "row" >
+ <div class="col-md-4">
+
+<% @recipes.each do |recipe| %>
+<!-- <a herf="/recipes/<%= recipe.id %> recipe.id%> -->
+  </div>
+
+  <div>
+    <h2><%= recipe.title %></h2>
+    <h3><%= recipe.chef %></h3>
+    <h4><%= recipe.ingredients %></h4>
+    <h4><%= recipe.directions %></h4>
+ <!--<img src = "<%=recipe.image %>" width = "300"> -->
+  <%= image_tag recipe.image, width: "300", class: "food-image"  %>
+  <hr>
+  </div>
+
+
+<%end%>

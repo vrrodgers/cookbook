@@ -1,0 +1,18 @@
+<h1> Enter in a new recipe. </h1>
+<br>
+<%= form_tag '/recipes' do %>
+<ul>
+<li><h4><%= label_tag :Title %>
+<%= text_field_tag :title %></li>
+<br>
+<li><h4><%= label_tag :chef %>
+<%= text_field_tag :chef %></li>
+<br>
+<li><h4><%= label_tag :Ingredients %>
+<%= text_field_tag :Ingredients %></li>
+<br>
+<li><h4><%= label_tag :Directions %>
+<%= text_field_tag :Directions %></li>
+<br>
+<%= submit_tag "Add Recipe" %></ul>
+<% end %>

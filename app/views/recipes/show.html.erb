@@ -1,0 +1,20 @@
+<h1><%= @recipe.title %></h1>
+<h2><%= @recipe.chef %></h2>
+<h4> Updated at: <%= @recipe.friendly_updated_at %></h4>
+<h3> Ingredients:</h3>
+<ul>
+<% @recipe.ingredients.split(",").each do | ingredient| %>
+  <li>  <%= ingredient %></li>
+  <%end%>
+</ul>
+<%= @recipe.ingredients %></h3>
+
+<ol>
+  <%= @recipe.directions.split(",").each do | direction| %></h3>
+  <li> <%= direction %></li>
+<% end %>
+</ol>
+
+
+<%= image_tag @recipe.image %>
+<%= link_to "Edit", " "
